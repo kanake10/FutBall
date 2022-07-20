@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">FutBall</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nothing_found">Nothing Found</string>
+    <string name="messi">Lionel Messi</string>
+    <string name="argentina">Argentina</string>
 </resources>
