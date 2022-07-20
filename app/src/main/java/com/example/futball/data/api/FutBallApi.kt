@@ -12,6 +12,6 @@ interface FutBallApi {
     suspend fun searchPlayers(@Query("p") query: String): PlayersDto
 
     @GET(PLAYER_DETAILS)
-    suspend fun getPlayersDetails(@Query("i") i: String): PlayersDto
+    suspend fun getPlayersDetails(@Query("id") id: String): PlayersDto
 
 }
