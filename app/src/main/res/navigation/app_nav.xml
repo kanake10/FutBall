@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/playerSearchFragment">
+
+    <fragment
+        android:id="@+id/playerSearchFragment"
+        android:name="com.example.futball.presentation.playersearch.PlayerSearchFragment"
+        android:label="fragment_player_search"
+        tools:layout="@layout/fragment_player_search" >
+        <action
+            android:id="@+id/action_playerSearchFragment_to_playerDetailsFragment"
+            app:destination="@id/playerDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerDetailsFragment"
+        android:name="com.example.futball.presentation.playerdetails.PlayerDetailsFragment"
+        android:label="fragment_player_details"
+        tools:layout="@layout/fragment_player_details">
+        <argument
+            android:name="idPlayer"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+
+
+</navigation>
