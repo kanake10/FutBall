@@ -13,10 +13,10 @@ import javax.inject.Inject
 class FootBallerSearchUseCase @Inject constructor(private val repository: FutBallRepository) {
 
 
-    operator fun invoke(q: String): Flow<Resource<List<Players>>> = flow {
+    operator fun invoke(p: String): Flow<Resource<List<Players>>> = flow {
         try {
             emit(Resource.Loading())
-            val data = repository.getSearchPlayers(q)
+            val data = repository.getSearchPlayers(p)
             val domainData =
                 if (data.player != null) data.player.map { it -> it.toPlayers() } else emptyList()
             emit(Resource.Success(data = domainData))

@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.futball.databinding.PlayerItemBinding
 
+//adapt the diff util recyclerview
 
 class FutBallAdapter : RecyclerView.Adapter<FutBallAdapter.MyViewHolder>() {
 

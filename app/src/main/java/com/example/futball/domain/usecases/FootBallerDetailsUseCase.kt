@@ -2,7 +2,7 @@ package com.example.futball.domain.usecases
 
 import com.example.futball.core.Resource
 import com.example.futball.data.mapper.toPlayer
-import com.example.futball.domain.models.Player
+import com.example.futball.domain.models.PlayerDetails
 import com.example.futball.domain.repository.FutBallRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -12,7 +12,7 @@ import javax.inject.Inject
 
 class FootBallerDetailsUseCase @Inject constructor(private val repository: FutBallRepository) {
 
-    operator fun invoke(id: String): Flow<Resource<List<Player>>> = flow {
+    operator fun invoke(id: String): Flow<Resource<List<PlayerDetails>>> = flow {
         try {
             emit(Resource.Loading())
             val data = repository.getPlayerDetails(id)

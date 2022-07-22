@@ -1,9 +1,9 @@
 package com.example.futball.domain.models
 
-data class Player(
+data class PlayerDetails(
     val strNationality: String,
-    val strPlayer: String,
     val strRender: String,
+    val strPlayer: String,
     val strTeam: String,
     val strTeam2: String,
     val strNumber: String,
@@ -16,5 +16,4 @@ data class Player(
     val strGender: String,
     val strSide: String,
     val strPosition: String,
-
 )

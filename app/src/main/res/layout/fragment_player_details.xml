@@ -6,7 +6,7 @@
     <data>
         <variable
             name="playerdetails"
-            type="com.example.futball.domain.models.Player" />
+            type="com.example.futball.domain.models.PlayerDetails" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -36,16 +36,14 @@
 
         <ImageView
             android:id="@+id/strRender"
-            android:scaleType="fitXY"
-            android:layout_marginStart="50dp"
-            android:padding="8dp"
             android:layout_width="290dp"
+            android:layout_marginStart="60dp"
             android:layout_height="220dp"
-            android:paddingTop="8dp"
-            android:layout_marginTop="20dp"
-            app:imageUrl="@{playerdetails.strRender}"
+            android:layout_marginTop="30dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/downloading"
+            app:urlToImage="@{playerdetails.strRender}" />
 
         <TextView
             android:id="@+id/strNationality"
@@ -58,7 +56,6 @@
             android:textColor="@android:color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/strRender" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

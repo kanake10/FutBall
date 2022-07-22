@@ -1,20 +1,38 @@
 package com.example.futball.data.mapper
 
-import com.example.futball.data.dto.PlayerDto
-import com.example.futball.domain.models.Player
+import com.example.futball.data.dto.PlayerDetailsDto
+import com.example.futball.domain.models.PlayerDetails
 import com.example.futball.domain.models.Players
 
-fun PlayerDto.toPlayer():Player{
-    return Player(
-        strNationality,strPlayer,strRender,
-        strTeam,strTeam2,strNumber,strSigning,
-        strWage,strKit,strAgent,strBirthLocation,strDescriptionEN,
-        strGender,strSide,strPosition,
+
+fun PlayerDetailsDto.toPlayer(): PlayerDetails {
+    return PlayerDetails(
+        strNationality = strNationality,
+        strPlayer = strPlayer,
+        strAgent = strAgent,
+        strBirthLocation = strBirthLocation,
+        strDescriptionEN = strDescriptionEN,
+        strGender = strGender,
+        strKit = strKit,
+        strNumber = strNumber,
+        strPosition = strPosition,
+        strRender = strRender.toString(),
+        strSide = strSide,
+        strSigning = strSigning,
+        strTeam = strTeam,
+        strTeam2 = strTeam2,
+        strWage = strWage
     )
 }
 
-fun PlayerDto.toPlayers(): Players {
+
+
+
+fun PlayerDetailsDto.toPlayers(): Players {
     return Players(
-        idPlayer, strNationality, strPlayer, strRender
+        strRender = strRender.toString(),
+        idPlayer = idPlayer,
+        strNationality = strNationality,
+        strPlayer = strPlayer
     )
 }
